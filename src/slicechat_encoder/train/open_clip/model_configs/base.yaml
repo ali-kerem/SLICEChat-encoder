@@ -1,0 +1,7 @@
+embed_dim: 768
+custom_text: true
+text_cfg:
+    hf_model_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+    hf_tokenizer_name: "microsoft/BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext"
+    hf_proj_type: "linear"
+    hf_pooler_type: "cls_pooler"

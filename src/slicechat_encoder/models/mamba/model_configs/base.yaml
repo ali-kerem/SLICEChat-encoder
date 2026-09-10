@@ -1,0 +1,83 @@
+# MAE Vision Mamba configuration for WSI feature reconstruction
+# This config defines both encoder and decoder architectures
+
+feature_dim: 768
+norm_feature_loss: false
+
+encoder_config:
+  encoder_embed_dim: 768
+  block_structure: MMMT
+  num_blocks: 6
+  
+  d_state: 16
+  d_conv: 4
+  expand: 2
+  
+  dropout: 0.0
+  drop_path_rate: 0.1
+  
+  rms_norm: true
+  layernorm_eps: 1e-5
+  normalize_output: true
+  
+  residual_in_fp32: true
+  fused_add_norm: false
+  
+  biscan: true
+  
+  hybrid_vit_config:
+    num_attention_heads: 12
+    qkv_bias: true
+    mlp_ratio: 4.0
+    hidden_act: "gelu_pytorch_tanh"
+    layer_norm_eps: 1e-6
+    attention_dropout: 0.0
+    hidden_dropout: 0.0
+  
+  pos_embed: "rope_2d"
+  rope_2d_theta: 150.0
+  rope_2d_mixed: true
+  
+  pooler: "average"
+  
+  normalize_image_patches: false
+  
+
+decoder_config:
+  encoder_embed_dim: 512
+  block_structure: MMMT
+  num_blocks: 2
+  
+  d_state: 16
+  d_conv: 4
+  expand: 2
+  
+  dropout: 0.0
+  drop_path_rate: 0.05
+  
+  rms_norm: true
+  layernorm_eps: 1e-5
+  normalize_output: true
+  
+  residual_in_fp32: true
+  fused_add_norm: false
+  
+  biscan: true
+  
+  hybrid_vit_config:
+    num_attention_heads: 8
+    qkv_bias: true
+    mlp_ratio: 4.0
+    hidden_act: "gelu_pytorch_tanh"
+    layer_norm_eps: 1e-6
+    attention_dropout: 0.0
+    hidden_dropout: 0.0
+  
+  pos_embed: "rope_2d"
+  rope_2d_theta: 150.0
+  rope_2d_mixed: true
+  
+  pooler: "average"
+  
+  normalize_image_patches: false
+  

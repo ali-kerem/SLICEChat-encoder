@@ -1,0 +1,8 @@
+num_queries: 1
+num_heads: 1
+pre_attn_norm: false
+q_proj: false
+k_proj: true
+v_proj: true
+mlp: true
+mlp_ratio: 4.0
