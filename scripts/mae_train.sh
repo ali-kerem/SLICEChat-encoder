@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-run_name="slicechat"
+run_name="slicechat_mae"
 base_log_dir="logs/mae"
 
 # You can set the devices and number of gpus

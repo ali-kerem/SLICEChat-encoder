@@ -1,6 +1,10 @@
 # SLICEChat Encoder
 
-Training code for a whole-slide image (WSI) encoder built from pre-extracted patch features and their spatial coordinates. Training has two required stages:
+Official whole-slide image (WSI) encoder training code for [SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models](https://arxiv.org/abs/2609.24894).
+
+This repository trains the SLICEChat encoder from pre-extracted patch features and their spatial coordinates. For training and inference with the full pathology multimodal LLM, see [SLICEChat](https://github.com/ali-kerem/SLICEChat).
+
+Encoder training has two required stages:
 
 1. **MAE pretraining** trains a vision encoder by reconstructing masked WSI patch features.
 2. **CLIP training** initializes the encoder from the MAE checkpoint and aligns slide representations with pathology-report text. The provided run also adds and trains a Cropr token-pruning module and an attention pooler.
