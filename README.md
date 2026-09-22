@@ -1,5 +1,7 @@
 # SLICEChat Encoder
 
+<p align="center"><a href="https://cyberiada.github.io/SLICEChat/">Project Page</a> | <a href="https://arxiv.org/abs/2609.24894">arXiv</a></p>
+
 Official whole-slide image (WSI) encoder training code for [SLICEChat: Progressive In-Encoder Token Pruning for Whole-Slide Pathology Language Models](https://arxiv.org/abs/2609.24894).
 
 This repository trains the SLICEChat encoder from pre-extracted patch features and their spatial coordinates. For training and inference with the full pathology multimodal LLM, see [SLICEChat](https://github.com/ali-kerem/SLICEChat).
